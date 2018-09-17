@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sharris <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/09/15 23:46:17 by sharris           #+#    #+#              #
+#    Updated: 2018/09/15 23:46:53 by sharris          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+apt-get update
+apt-get upgrade >> /var/log/update_script.log
+
+# Add the following to /etc/crontab (in pseudo) minus comment char
+# * 4   * * 0   root    bash /directory/thisfile.sh

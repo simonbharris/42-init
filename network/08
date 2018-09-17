@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    08                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sharris <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/09/15 23:49:07 by sharris           #+#    #+#              #
+#    Updated: 2018/09/15 23:49:08 by sharris          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Can do a whois slash16.org and get some information that might be helpful
+# to finding the host of the web server.
+
+# the name server: ...awsdns... indicates that this is an amazon-hosted
+# service (doing some research on google to find that deduction.)
+
+# Furthermore online resources can help to speed this method up, such as
+# https://www.whoishostingthis.com/
+
+# Which returns Amazon.com

@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    04                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sharris <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/09/15 23:47:52 by sharris           #+#    #+#              #
+#    Updated: 2018/09/15 23:47:53 by sharris          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Ensuring that necessary files exist
+if [ ! -e /root/crontab.diff ] || [ ! -e /root/crontab.old ] || [ ! -e /root/crontabmd5sum ]
+then
+    touch /root/crontab.diff
+    touch /root/crontab.old
+    touch /root/crontabmd5sum
+fi
+# Obtaining values from files
+MD5SUM=`md5sum /etc/crontab | cat -d ' '-f 1`
+OLDCRON=`cat /root/crontabmd5sum`
+ARG1=$MD5SUM
+ARG2=$OLDCRON
+# Comparing old md5sum with new md5sum (on crontab)
+if[[ ! $ARG1 = $ARG2 ]]
+then
+#   Record changes,a nd email root with the diff of the changes.
+    diff /root/crontab.old /etc/crontab > /root/crontab.diff
+    cat /etc/crontab > /root/crontab.old
+    md5sum /etc/crontab | cat -d ' ' -f1 > /root/crontabmd5sum
+    mutt -s "crontab has been modified" -e "set crypt_use_gpgme=no" root < /root/crontab.diff
+fi
+
+# Add the following to /etc/crontab (in pseudo, minus comment char)
+# * 0   * * *   root    bash /directory/thisfile.sh
