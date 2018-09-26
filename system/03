@@ -6,9 +6,9 @@
 #    By: sharris <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/15 23:43:25 by sharris           #+#    #+#              #
-#    Updated: 2018/09/15 23:43:27 by sharris          ###   ########.fr        #
+#    Updated: 2018/09/25 22:55:59 by sharris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Having su right, edit /etc/hostname 
+# Having su rights, edit /etc/hostname 
 # running '/etc/init.d/hostname.sh start' will make the change active.

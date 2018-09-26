@@ -6,8 +6,8 @@
 #    By: sharris <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/15 23:45:09 by sharris           #+#    #+#              #
-#    Updated: 2018/09/15 23:45:10 by sharris          ###   ########.fr        #
+#    Updated: 2018/09/25 23:18:43 by sharris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ip tables -P INPUT DROP
+iptables -P INPUT DROP
