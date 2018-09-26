@@ -6,8 +6,8 @@
 #    By: sharris <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/15 23:48:46 by sharris           #+#    #+#              #
-#    Updated: 2018/09/15 23:48:47 by sharris          ###   ########.fr        #
+#    Updated: 2018/09/25 17:12:35 by sharris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ifconfig en1 | head -2 | sed 's/flags.*//'
+ifconfig en1 | head -2 | sed 's/>.*/>/'

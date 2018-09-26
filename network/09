@@ -6,11 +6,13 @@
 #    By: sharris <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/15 23:49:10 by sharris           #+#    #+#              #
-#    Updated: 2018/09/15 23:49:11 by sharris          ###   ########.fr        #
+#    Updated: 2018/09/25 17:40:03 by sharris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Found using:
 # dig +short myip.opendns.com @resolver1.opendns.com
-
+# Dig asks @server what the ip of the given name is. 
+# opendns.com is setup to reply a request to myip.opendns.com with the
+# ip of the sender.
 64.62.224.29
