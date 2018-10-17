@@ -23,7 +23,7 @@ OLDCRON=`cat /root/crontabmd5sum`
 ARG1=$MD5SUM
 ARG2=$OLDCRON
 # Comparing old md5sum with new md5sum (on crontab)
-if[[ ! $ARG1 = $ARG2 ]]
+if [ ! $ARG1 = $ARG2 ]
 then
 #   Record changes,a nd email root with the diff of the changes.
     diff /root/crontab.old /etc/crontab > /root/crontab.diff
