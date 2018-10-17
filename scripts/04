@@ -33,4 +33,4 @@ then
 fi
 
 # Add the following to /etc/crontab (in pseudo, minus comment char)
-# * 0   * * *   root    bash /directory/thisfile.sh
+# 00 0   * * *   root    bash /directory/thisfile.sh
